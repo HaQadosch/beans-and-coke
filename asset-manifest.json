@@ -1,25 +1,26 @@
 {
   "files": {
-    "main.css": "/beans-and-coke/static/css/main.ad9939f4.chunk.css",
-    "main.js": "/beans-and-coke/static/js/main.1352af89.chunk.js",
-    "main.js.map": "/beans-and-coke/static/js/main.1352af89.chunk.js.map",
+    "main.css": "/beans-and-coke/static/css/main.4e4c7fa4.chunk.css",
+    "main.js": "/beans-and-coke/static/js/main.71eee2e3.chunk.js",
+    "main.js.map": "/beans-and-coke/static/js/main.71eee2e3.chunk.js.map",
     "runtime-main.js": "/beans-and-coke/static/js/runtime-main.b4d874ae.js",
     "runtime-main.js.map": "/beans-and-coke/static/js/runtime-main.b4d874ae.js.map",
     "static/css/2.87d4210f.chunk.css": "/beans-and-coke/static/css/2.87d4210f.chunk.css",
-    "static/js/2.83d8ce0b.chunk.js": "/beans-and-coke/static/js/2.83d8ce0b.chunk.js",
-    "static/js/2.83d8ce0b.chunk.js.map": "/beans-and-coke/static/js/2.83d8ce0b.chunk.js.map",
+    "static/js/2.9f936e03.chunk.js": "/beans-and-coke/static/js/2.9f936e03.chunk.js",
+    "static/js/2.9f936e03.chunk.js.map": "/beans-and-coke/static/js/2.9f936e03.chunk.js.map",
     "index.html": "/beans-and-coke/index.html",
-    "precache-manifest.f35877064502fbd7103671b02b0f7469.js": "/beans-and-coke/precache-manifest.f35877064502fbd7103671b02b0f7469.js",
+    "precache-manifest.5dcc27efb926377a88e0018f6f9952e7.js": "/beans-and-coke/precache-manifest.5dcc27efb926377a88e0018f6f9952e7.js",
     "service-worker.js": "/beans-and-coke/service-worker.js",
     "static/css/2.87d4210f.chunk.css.map": "/beans-and-coke/static/css/2.87d4210f.chunk.css.map",
-    "static/css/main.ad9939f4.chunk.css.map": "/beans-and-coke/static/css/main.ad9939f4.chunk.css.map",
-    "static/js/2.83d8ce0b.chunk.js.LICENSE.txt": "/beans-and-coke/static/js/2.83d8ce0b.chunk.js.LICENSE.txt"
+    "static/css/main.4e4c7fa4.chunk.css.map": "/beans-and-coke/static/css/main.4e4c7fa4.chunk.css.map",
+    "static/js/2.9f936e03.chunk.js.LICENSE.txt": "/beans-and-coke/static/js/2.9f936e03.chunk.js.LICENSE.txt",
+    "static/media/Beans.png": "/beans-and-coke/static/media/Beans.c81447fd.png"
   },
   "entrypoints": [
     "static/js/runtime-main.b4d874ae.js",
     "static/css/2.87d4210f.chunk.css",
-    "static/js/2.83d8ce0b.chunk.js",
-    "static/css/main.ad9939f4.chunk.css",
-    "static/js/main.1352af89.chunk.js"
+    "static/js/2.9f936e03.chunk.js",
+    "static/css/main.4e4c7fa4.chunk.css",
+    "static/js/main.71eee2e3.chunk.js"
   ]
 }

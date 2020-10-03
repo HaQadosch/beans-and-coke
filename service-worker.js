@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/beans-and-coke/precache-manifest.f35877064502fbd7103671b02b0f7469.js"
+  "/beans-and-coke/precache-manifest.5dcc27efb926377a88e0018f6f9952e7.js"
 );
 
 self.addEventListener('message', (event) => {
