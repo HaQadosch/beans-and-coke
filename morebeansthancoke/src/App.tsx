@@ -3,6 +3,7 @@ import "nes.css/css/nes.min.css";
 import './App.css';
 import beans from "./assets/Beans.png"
 import coke from "./assets/Coke.png"
+import oranges from "./assets/Oranges.jpg"
 
 function App() {
   return (
@@ -22,7 +23,12 @@ function App() {
             </div>
             <div className="card__body">
               <h2 className="card__title">Beans</h2>
-              <h3 className="card__price"><i className="nes-icon coin is-medium"></i></h3>
+              <h3 className="card__price">
+                <button className="nes-badge is-splited">
+                  <span className="is-dark"><i className="nes-icon coin is-small"></i></span>
+                  <span className="is-success">0.50</span>
+                </button>
+              </h3>
               <p className="card__copy">
                 Beans and Coke <span className="nes-text is-primary">Beans</span> is a perfect addition to your dishes. Bring protein, fiber and flavor to your favorite recipes.
               </p>
@@ -43,10 +49,50 @@ function App() {
             </div>
             <div className="card__body">
               <h2 className="card__title">Coke</h2>
-              <h3 className="card__price"><i className="nes-icon coin is-medium"></i><i className="nes-icon coin is-medium"></i></h3>
+              <h3 className="card__price">
+                <button className="nes-badge is-splited">
+                  <span className="is-dark"><i className="nes-icon coin is-small"></i></span>
+                  <span className="is-success">0.70</span>
+                </button>
+              </h3>
               <p className="card__copy">
                 Beans and Coke <span className="nes-text is-primary">Coke</span> is crisp, delicious taste with Beans, on the go, or to share. Serve ice cold for maximum refreshment.
               </p>
+            </div>
+            <footer className="card__footer">
+              <div className="card__actions">
+                <button type="button" className="button nes-btn is-primary">
+                  Add to basket
+                </button>
+              </div>
+            </footer>
+          </article>
+          <article className="nes-container is-rounded card">
+            <div className="card__header">
+              <figure className="card__figure">
+                <img src={oranges} alt="" className="card__image" />
+              </figure>
+            </div>
+            <div className="card__body">
+              <h2 className="card__title">Oranges</h2>
+              <h3 className="card__price">
+                <button className="nes-badge is-splited">
+                  <span className="is-dark"><i className="nes-icon coin is-small"></i>/kg</span>
+                  <span className="is-success">1.99</span>
+                </button>
+              </h3>
+              <p className="card__copy">
+                Beans and Coke <span className="nes-text is-primary">Oranges</span> are not intended to diagnose, treat, cure, or prevent any disease or health condition.
+              </p>
+              <label htmlFor="default_select">Select Quantity</label>
+              <div className="nes-select">
+                <select required id="default_select">
+                  <option value="" disabled selected hidden>Select...</option>
+                  <option value="0">200g</option>
+                  <option value="1">600g</option>
+                  <option value="2">800g</option>
+                </select>
+              </div>
             </div>
             <footer className="card__footer">
               <div className="card__actions">
