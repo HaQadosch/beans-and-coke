@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import { Counter } from './features/counter/Counter';
 import './App.css';
+// import "nes.css/css/nes.min.css";
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
         <span>
-          <span>Learn </span>
+          <span className="nes-text is-primary">Learn </span>
           <a
             className="App-link"
             href="https://reactjs.org/"
