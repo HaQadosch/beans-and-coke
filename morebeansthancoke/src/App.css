@@ -25,3 +25,11 @@ img.card__image {
 .basket {
   justify-self: stretch;
 }
+
+.basket > .nes-container {
+  margin-bottom: 25px;
+}
+
+li > button.nes-btn {
+  margin-right: 15px;
+}

@@ -108,14 +108,14 @@ function App() {
             <p className="title">Basket</p>
             <div className="lists">
               <ul className="nes-list is-disc">
-                <li><button type="button" className="nes-btn"><i className="nes-icon close is-small"></i></button>Beans 0.50</li>
-                <li><button type="button" className="nes-btn"><i className="nes-icon close is-small"></i></button>Beans 0.50</li>
-                <li><button type="button" className="nes-btn"><i className="nes-icon close is-small"></i></button>Beans 0.50</li>
-                <li><button type="button" className="nes-btn"><i className="nes-icon close is-small"></i></button>Coke 0.70</li>
-                <li><button type="button" className="nes-btn"><i className="nes-icon close is-small"></i></button>Coke 0.70</li>
-                <li><button type="button" className="nes-btn"><i className="nes-icon close is-small"></i></button>Oranges 0.200 kg @ #1.99kg 0.40</li>
+                <li><button type="button" className="nes-btn"><i className="nes-icon close is-small"></i></button>Beans <span className="nes-text is-success">0.50</span></li>
+                <li><button type="button" className="nes-btn"><i className="nes-icon close is-small"></i></button>Beans <span className="nes-text is-success">0.50</span></li>
+                <li><button type="button" className="nes-btn"><i className="nes-icon close is-small"></i></button>Beans <span className="nes-text is-success">0.50</span></li>
+                <li><button type="button" className="nes-btn"><i className="nes-icon close is-small"></i></button>Coke <span className="nes-text is-success">0.70</span></li>
+                <li><button type="button" className="nes-btn"><i className="nes-icon close is-small"></i></button>Coke <span className="nes-text is-success">0.70</span></li>
+                <li><button type="button" className="nes-btn"><i className="nes-icon close is-small"></i></button>Oranges 0.200 kg @ #1.99kg <span className="nes-text is-success">0.40</span></li>
                 <li>----</li>
-                <li>Sub-total 3.30</li>
+                <li>Sub-total <span className="nes-text is-success">3.30</span></li>
               </ul>
             </div>
           </div>
@@ -123,15 +123,15 @@ function App() {
             <p className="title">Savings</p>
             <div className="lists">
               <ul className="nes-list is-circle">
-                <li>Beans 3 for 2 -0.50</li>
-                <li>Coke 2 for #1</li>
+                <li>Beans 3 for 2 <span className="nes-text is-success">-0.50</span></li>
+                <li>Coke 2 for #1 <span className="nes-text is-success">-0.40</span></li>
                 <li>----</li>
-                <li>Total savings -0.90</li>
+                <li>Total savings <span className="nes-text is-success">-0.90</span></li>
               </ul>
             </div>
           </div>
           <div className="nes-container is-dark is-rounded">
-            <p>Total to pay: 2.40</p>
+            <p>Total to pay: <span className="nes-text is-success">2.40</span></p>
           </div>
         </section>
       </article>
