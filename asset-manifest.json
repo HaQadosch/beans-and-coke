@@ -1,26 +1,27 @@
 {
   "files": {
-    "main.css": "/beans-and-coke/static/css/main.ff361311.chunk.css",
-    "main.js": "/beans-and-coke/static/js/main.38cc676e.chunk.js",
-    "main.js.map": "/beans-and-coke/static/js/main.38cc676e.chunk.js.map",
+    "main.css": "/beans-and-coke/static/css/main.c3a89f2e.chunk.css",
+    "main.js": "/beans-and-coke/static/js/main.98cda36e.chunk.js",
+    "main.js.map": "/beans-and-coke/static/js/main.98cda36e.chunk.js.map",
     "runtime-main.js": "/beans-and-coke/static/js/runtime-main.b4d874ae.js",
     "runtime-main.js.map": "/beans-and-coke/static/js/runtime-main.b4d874ae.js.map",
     "static/css/2.87d4210f.chunk.css": "/beans-and-coke/static/css/2.87d4210f.chunk.css",
-    "static/js/2.6e2723ae.chunk.js": "/beans-and-coke/static/js/2.6e2723ae.chunk.js",
-    "static/js/2.6e2723ae.chunk.js.map": "/beans-and-coke/static/js/2.6e2723ae.chunk.js.map",
+    "static/js/2.10cb78e4.chunk.js": "/beans-and-coke/static/js/2.10cb78e4.chunk.js",
+    "static/js/2.10cb78e4.chunk.js.map": "/beans-and-coke/static/js/2.10cb78e4.chunk.js.map",
     "index.html": "/beans-and-coke/index.html",
-    "precache-manifest.e08d9d1193c4b2999f1b5c086312453a.js": "/beans-and-coke/precache-manifest.e08d9d1193c4b2999f1b5c086312453a.js",
+    "precache-manifest.bacd1e5ac5edb1c4327f15d2276245be.js": "/beans-and-coke/precache-manifest.bacd1e5ac5edb1c4327f15d2276245be.js",
     "service-worker.js": "/beans-and-coke/service-worker.js",
     "static/css/2.87d4210f.chunk.css.map": "/beans-and-coke/static/css/2.87d4210f.chunk.css.map",
-    "static/css/main.ff361311.chunk.css.map": "/beans-and-coke/static/css/main.ff361311.chunk.css.map",
-    "static/js/2.6e2723ae.chunk.js.LICENSE.txt": "/beans-and-coke/static/js/2.6e2723ae.chunk.js.LICENSE.txt",
-    "static/media/Beans.png": "/beans-and-coke/static/media/Beans.c81447fd.png"
+    "static/css/main.c3a89f2e.chunk.css.map": "/beans-and-coke/static/css/main.c3a89f2e.chunk.css.map",
+    "static/js/2.10cb78e4.chunk.js.LICENSE.txt": "/beans-and-coke/static/js/2.10cb78e4.chunk.js.LICENSE.txt",
+    "static/media/Beans.png": "/beans-and-coke/static/media/Beans.c81447fd.png",
+    "static/media/Oranges.jpg": "/beans-and-coke/static/media/Oranges.84967adb.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.b4d874ae.js",
     "static/css/2.87d4210f.chunk.css",
-    "static/js/2.6e2723ae.chunk.js",
-    "static/css/main.ff361311.chunk.css",
-    "static/js/main.38cc676e.chunk.js"
+    "static/js/2.10cb78e4.chunk.js",
+    "static/css/main.c3a89f2e.chunk.css",
+    "static/js/main.98cda36e.chunk.js"
   ]
 }
