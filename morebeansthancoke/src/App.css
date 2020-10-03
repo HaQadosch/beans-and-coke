@@ -1,4 +1,19 @@
-.App {
-  text-align: center;
+/* Minimal setting to look good anywhere */
+main {
+  max-width: 70ch;
+  padding: 2ch;
+  margin: auto;
 }
 
+article {
+  display: grid;
+  place-items: center;
+}
+
+.products article {
+  grid-template-columns: 1fr 2fr;
+}
+
+img.card__image {
+  width: 200px;
+}
