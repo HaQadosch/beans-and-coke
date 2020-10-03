@@ -104,30 +104,35 @@ function App() {
           </article>
         </section>
         <section className="basket nes-table-responsive">
-          <table className="nes-table is-bordered is-centered">
-            <thead>
-              <tr>
-                <th>Table.is-bordered</th>
-                <th>Table.is-centered</th>
-                <th>Table.is-centered</th>
-                <th>Table.is-centered</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Thou hast had a good morning</td>
-                <td>Thou hast had a good afternoon</td>
-                <td>Thou hast had a good evening</td>
-                <td>Thou hast had a good night</td>
-              </tr>
-              <tr>
-                <td>Thou hast had a good morning</td>
-                <td>Thou hast had a good afternoon</td>
-                <td>Thou hast had a good evening</td>
-                <td>Thou hast had a good night</td>
-              </tr>
-            </tbody>
-          </table>
+          <div className="nes-container is-rounded with-title">
+            <p className="title">Basket</p>
+            <div className="lists">
+              <ul className="nes-list is-disc">
+                <li><button type="button" className="nes-btn"><i className="nes-icon close is-small"></i></button>Beans 0.50</li>
+                <li><button type="button" className="nes-btn"><i className="nes-icon close is-small"></i></button>Beans 0.50</li>
+                <li><button type="button" className="nes-btn"><i className="nes-icon close is-small"></i></button>Beans 0.50</li>
+                <li><button type="button" className="nes-btn"><i className="nes-icon close is-small"></i></button>Coke 0.70</li>
+                <li><button type="button" className="nes-btn"><i className="nes-icon close is-small"></i></button>Coke 0.70</li>
+                <li><button type="button" className="nes-btn"><i className="nes-icon close is-small"></i></button>Oranges 0.200 kg @ #1.99kg 0.40</li>
+                <li>----</li>
+                <li>Sub-total 3.30</li>
+              </ul>
+            </div>
+          </div>
+          <div className="nes-container is-rounded with-title">
+            <p className="title">Savings</p>
+            <div className="lists">
+              <ul className="nes-list is-circle">
+                <li>Beans 3 for 2 -0.50</li>
+                <li>Coke 2 for #1</li>
+                <li>----</li>
+                <li>Total savings -0.90</li>
+              </ul>
+            </div>
+          </div>
+          <div className="nes-container is-dark is-rounded">
+            <p>Total to pay: 2.40</p>
+          </div>
         </section>
       </article>
     </main >
