@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e3fa08a1e310c43afd6f1d6cc5699873",
+    "revision": "c67b279d6fb833eeb712971167d09292",
     "url": "/beans-and-coke/index.html"
   },
   {
-    "revision": "346808f22daa111d3bc3",
+    "revision": "13ae4fca073ec4500b9f",
     "url": "/beans-and-coke/static/css/2.87d4210f.chunk.css"
   },
   {
-    "revision": "085e59971eb717b9019a",
-    "url": "/beans-and-coke/static/css/main.4e4c7fa4.chunk.css"
+    "revision": "92288f11f03a5099299d",
+    "url": "/beans-and-coke/static/css/main.ff361311.chunk.css"
   },
   {
-    "revision": "346808f22daa111d3bc3",
-    "url": "/beans-and-coke/static/js/2.9f936e03.chunk.js"
+    "revision": "13ae4fca073ec4500b9f",
+    "url": "/beans-and-coke/static/js/2.6e2723ae.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/beans-and-coke/static/js/2.9f936e03.chunk.js.LICENSE.txt"
+    "url": "/beans-and-coke/static/js/2.6e2723ae.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "085e59971eb717b9019a",
-    "url": "/beans-and-coke/static/js/main.71eee2e3.chunk.js"
+    "revision": "92288f11f03a5099299d",
+    "url": "/beans-and-coke/static/js/main.38cc676e.chunk.js"
   },
   {
     "revision": "75a8acac9b1ec9b15296",
