@@ -7,8 +7,6 @@ interface IBasket {
 export const Basket: React.FC<IBasket> = () => {
 
   return (
-    <div>
-
-    </div>
+    <section className="basket nes-table-responsive"></section>
   )
 }
