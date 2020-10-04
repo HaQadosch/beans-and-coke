@@ -1,7 +1,7 @@
 import { render, waitFor } from '@testing-library/react'
 import React from 'react'
 import { Provider } from 'react-redux'
-import { store } from '../../app/store'
+import { store, testState } from '../../app/store'
 import { ProductCard, Products } from './Products'
 import { selectProducts } from './productSlice'
 
@@ -20,7 +20,7 @@ test('renders the list of products available in the store', () => {
 
 test('renders the Beans details', async () => {
   const { products } = selectProducts({
-    counter: { value: 0 },
+    ...testState,
     products: {
       products: [
         {
