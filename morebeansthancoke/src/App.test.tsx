@@ -1,15 +1,16 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { getByAltText, render } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { store } from './app/store';
-import App from './App';
+import { App } from './App';
 
-test('renders learn react link', () => {
-  const { getByText } = render(
-    <Provider store={store}>
+test('renders the title Beans and Coke', () => {
+  const { getByAltText, getByText } = render(
+    <Provider store={ store }>
       <App />
     </Provider>
   );
 
-  expect(getByText(/0/i)).toBeInTheDocument();
+  expect(getByAltText(/beans/i)).toBeInTheDocument();
+  expect(getByText(/beans/i, { selector: 'h1' })).toBeInTheDocument();
 });
