@@ -13,12 +13,12 @@ test('renders the list of products available in the store', () => {
   )
 
   expect(getAllByText(/add to basket/i)).toHaveLength(3)
-  expect(getByText(/Beans/))
-  expect(getByText(/Coke/))
-  expect(getByText(/Oranges/))
+  expect(getByText(/Beans/i, { selector: 'h2' }))
+  expect(getByText(/Coke/i, { selector: 'h2' }))
+  expect(getByText(/Oranges/i, { selector: 'h2' }))
 })
 
-test('renders the Beans details', () => {
+test('renders the Beans details', async () => {
   const { products } = selectProducts({
     counter: { value: 0 },
     products: {
@@ -35,12 +35,13 @@ test('renders the Beans details', () => {
     }
   })
 
-  const { debug, getByText, getByRole } = render(
+  const { debug, getByText, getByAltText } = render(
     <ProductCard { ...products[0] } />
   )
-  expect(getByText(/Beans/))
-  expect(getByText(/add to basket/))
+  expect(getByText(/Beans/i, { selector: 'h2' }))
+  expect(getByText(/add to basket/i))
   expect(getByText(/0.5/))
-  expect(getByText(/is a perfect addition to your dishes/))
+  expect(getByText(/is a perfect addition to your dishes/i))
+  expect(getByAltText(/Beans/i))
   debug()
 })
