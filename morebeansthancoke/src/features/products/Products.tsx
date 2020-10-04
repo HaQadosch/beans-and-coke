@@ -25,7 +25,6 @@ export const ProductCard: React.FC<Product> = ({ sku, name, description, pricePe
 
   useEffect(() => {
     import(`../../assets/${ picture }`).then(src => {
-      console.log({ src })
       setPicSrc(src.default)
     })
   }, [picture])
@@ -41,7 +40,7 @@ export const ProductCard: React.FC<Product> = ({ sku, name, description, pricePe
         <h2 className="card__title">{ name }</h2>
         <h3 className="card__price">
           <button className="nes-badge is-splited">
-            <span className="is-dark"><i className="nes-icon coin is-small"></i></span>
+            <span className="is-dark"><i className="nes-icon coin is-small"></i>{ pricePerKg ? '/kg' : '' }</span>
             <span className="is-success">{ pricePerKg || pricePerUnit }</span>
           </button>
         </h3>

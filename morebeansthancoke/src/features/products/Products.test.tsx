@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react'
+import { render, waitFor } from '@testing-library/react'
 import React from 'react'
 import { Provider } from 'react-redux'
 import { store } from '../../app/store'
@@ -35,13 +35,15 @@ test('renders the Beans details', async () => {
     }
   })
 
-  const { debug, getByText, getByAltText } = render(
+  const { getByText, getByAltText, container } = render(
     <ProductCard { ...products[0] } />
   )
+  await waitFor(() => {
+    expect(container.querySelector('img')?.src).toMatch(/Beans.png/i)
+  })
   expect(getByText(/Beans/i, { selector: 'h2' }))
   expect(getByText(/add to basket/i))
   expect(getByText(/0.5/))
   expect(getByText(/is a perfect addition to your dishes/i))
   expect(getByAltText(/Beans/i))
-  debug()
 })
