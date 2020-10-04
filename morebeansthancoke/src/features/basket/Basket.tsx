@@ -25,7 +25,7 @@ export const Basket: React.FC<IBasket> = () => {
               </li>
             )) }
             <li>----</li>
-            <li>Sub-total <span className="nes-text is-success">3.30</span></li>
+            <li>Sub-total <span className="nes-text is-success">0.00</span></li>
           </ul>
         </div>
       </div>

@@ -98,7 +98,7 @@ describe('<Product />', () => {
     )
 
     expect(getAllByText(/add to basket/i)).toHaveLength(3)
-    expect(container.querySelectorAll('li button')).toHaveLength(0)
+    expect(container.querySelectorAll('li button')).toHaveLength(0) // check that the basket is indeed empty
 
     fireEvent.click(container.querySelectorAll('button[aria-label="add Beans to basket"]')[0])
     fireEvent.click(container.querySelectorAll('button[aria-label="add Beans to basket"]')[0])
