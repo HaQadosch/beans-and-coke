@@ -20,7 +20,7 @@ export const Products: React.FC<IProducts> = () => {
   )
 }
 
-export const ProductCard: React.FC<Product> = ({ sku, name, description, pricePerKg, pricePerUnit, picture }) => {
+export const ProductCard: React.FC<Product> = ({ sku, name, description, pricePerKg, priceDisplayed, picture }) => {
   const [picSrc, setPicSrc] = useState()
 
   useEffect(() => {
@@ -41,7 +41,7 @@ export const ProductCard: React.FC<Product> = ({ sku, name, description, pricePe
         <h3 className="card__price">
           <button className="nes-badge is-splited">
             <span className="is-dark"><i className="nes-icon coin is-small"></i>{ pricePerKg ? '/kg' : '' }</span>
-            <span className="is-success">{ pricePerKg || pricePerUnit }</span>
+            <span className="is-success">{ priceDisplayed }</span>
           </button>
         </h3>
         <p className="card__copy">

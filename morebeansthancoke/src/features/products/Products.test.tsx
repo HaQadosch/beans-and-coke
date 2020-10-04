@@ -29,7 +29,8 @@ describe('<Product />', () => {
             name: 'Beans',
             description: 'is a perfect addition to your dishes. Bring protein, fiber and flavor to your favorite recipes.',
             pricePerKg: null,
-            pricePerUnit: 0.5,
+            pricePerUnit: 0.50,
+            priceDisplayed: '0.50',
             picture: 'Beans.png'
           },
         ]
@@ -45,7 +46,7 @@ describe('<Product />', () => {
     })
     expect(getByText(/Beans/i, { selector: 'h2' }))
     expect(getByText(/add to basket/i))
-    expect(getByText(/0.5/))
+    expect(getByText(/0.50/))
     expect(getByText(/is a perfect addition to your dishes/i))
     expect(getByAltText(/Beans/i))
   })

@@ -4,7 +4,7 @@ import { RootState } from '../../app/store';
 import { Product } from '../products/catalog'
 import { v4 as uuidv4 } from 'uuid';
 
-export type BasketItem = Pick<Product, 'sku' | 'name' | 'pricePerKg' | 'pricePerUnit'> & { uuid: string }
+export type BasketItem = Pick<Product, 'sku' | 'name' | 'pricePerKg' | 'pricePerUnit' | 'priceDisplayed'> & { uuid: string }
 
 export type BasketState = BasketItem[]
 
@@ -18,7 +18,7 @@ export const basketSlice = createSlice({
     addItem: (state, action: PayloadAction<Product['sku']>) => {
       const [foundItem] = catalog
         .filter(({ sku }) => sku === action.payload)
-        .map(({ sku, name, pricePerKg, pricePerUnit }) => ({ sku, name, pricePerKg, pricePerUnit, uuid: uuidv4() }))
+        .map(({ sku, name, pricePerKg, pricePerUnit, priceDisplayed }) => ({ sku, name, pricePerKg, pricePerUnit, priceDisplayed, uuid: uuidv4() }))
       if (foundItem?.sku !== undefined) state.push(foundItem)
     },
     // { type: 'basket/removeItem', payload: '9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d' }

@@ -10,6 +10,7 @@ const item1: BasketItem = {
   name: 'Beans',
   pricePerKg: null,
   pricePerUnit: 0.5,
+  priceDisplayed: '0.50',
   uuid: 'd5879246-60e4-4da0-b2f5-d85a3dd129a0'
 }
 const item2: BasketItem = {
@@ -17,6 +18,7 @@ const item2: BasketItem = {
   name: 'Coke',
   pricePerKg: null,
   pricePerUnit: 0.7,
+  priceDisplayed: '0.70',
   uuid: '5a5e9e7b-bda8-4056-b54a-e677962ce4f1'
 }
 const item3: BasketItem = {
@@ -24,6 +26,7 @@ const item3: BasketItem = {
   name: 'Oranges',
   pricePerKg: 1.99,
   pricePerUnit: null,
+  priceDisplayed: '1.99',
   uuid: 'cb6fe7c5-58a4-410c-954d-4a2f70461d3e'
 }
 
@@ -63,8 +66,11 @@ describe('<Basket />', () => {
 
     expect(container.querySelectorAll('button')).toHaveLength(3)
     expect(getByText(/beans/i))
+    expect(getByText(/0.50/i))
     expect(getByText(/coke/i))
+    expect(getByText(/0.70/i))
     expect(getByText(/oranges/i))
+    expect(getByText(/1.99/i))
   })
 
   test('removes the item when the X button is clicked', () => {

@@ -17,11 +17,11 @@ export const Basket: React.FC<IBasket> = () => {
         <p className="title">Basket</p>
         <div className="lists">
           <ul className="nes-list is-disc">
-            { basket.map(({ uuid, name, pricePerKg, pricePerUnit }) => (
+            { basket.map(({ uuid, name, priceDisplayed }) => (
               <li key={ uuid }>
                 <button type="button" onClick={ () => dispatch(removeItem(uuid)) } className="nes-btn"><i className="nes-icon close is-small"></i></button>
                 { name } { ' ' }
-                <span className="nes-text is-success">{ pricePerKg || pricePerUnit }</span>
+                <span className="nes-text is-success">{ priceDisplayed }</span>
               </li>
             )) }
             <li>----</li>
