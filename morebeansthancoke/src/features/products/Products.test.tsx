@@ -1,13 +1,19 @@
-import { render, waitFor, fireEvent, getByText } from '@testing-library/react'
+import { configureStore } from '@reduxjs/toolkit'
+import { render, waitFor, fireEvent, getByText, cleanup } from '@testing-library/react'
 import React from 'react'
 import { Provider } from 'react-redux'
-import { App } from '../../App'
 import { store, testState } from '../../app/store'
 import { Basket } from '../basket/Basket'
 import { ProductCard, Products } from './Products'
 import { selectProducts } from './productSlice'
+import basketReducer from '../basket/basketSlice'
+import productReducer from './productSlice'
+import { catalog } from './catalog'
+
+afterEach(cleanup)
 
 describe('<Product />', () => {
+
   test('renders the list of products available in the store', () => {
     const { debug, getAllByText, getByText } = render(
       <Provider store={ store }>
@@ -64,11 +70,41 @@ describe('<Product />', () => {
     )
 
     expect(getAllByText(/add to basket/i)).toHaveLength(3)
+    expect(container.querySelectorAll('li button')).toHaveLength(0)
 
     fireEvent.click(container.querySelectorAll('button[aria-label="add Beans to basket"]')[0])
     await waitFor(() => {
       expect(container.querySelectorAll('li button')).toHaveLength(1)
     })
     expect(getByText('Beans', { selector: 'li' }))
+  })
+
+  test('add the item twice if add to basket is clicked twice', async () => {
+    const storeWithEmptyBasket = configureStore({
+      reducer: {
+        basket: basketReducer,
+        products: productReducer
+      },
+      preloadedState: {
+        products: { products: catalog },
+        basket: [],
+      }
+    })
+    const { getAllByText, container } = render(
+      <Provider store={ storeWithEmptyBasket }>
+        <Products />
+        <Basket />
+      </Provider>
+    )
+
+    expect(getAllByText(/add to basket/i)).toHaveLength(3)
+    expect(container.querySelectorAll('li button')).toHaveLength(0)
+
+    fireEvent.click(container.querySelectorAll('button[aria-label="add Beans to basket"]')[0])
+    fireEvent.click(container.querySelectorAll('button[aria-label="add Beans to basket"]')[0])
+    await waitFor(() => {
+      expect(container.querySelectorAll('li button')).toHaveLength(2)
+    })
+    expect(getAllByText('Beans', { selector: 'li' }))
   })
 })
