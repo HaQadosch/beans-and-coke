@@ -4,12 +4,13 @@ import { Provider } from 'react-redux';
 import { store } from './app/store';
 import App from './App';
 
-test('renders learn react link', () => {
-  const { getByText } = render(
-    <Provider store={store}>
+test('renders the title Beans and Coke', () => {
+  const { getByRole, getByText } = render(
+    <Provider store={ store }>
       <App />
     </Provider>
   );
 
-  expect(getByText(/0/i)).toBeInTheDocument();
+  expect(getByRole(/img/i)).toBeInTheDocument();
+  expect(getByText(/beans/i, { selector: 'h1' })).toBeInTheDocument();
 });
