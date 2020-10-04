@@ -2,8 +2,8 @@ import React from 'react';
 import { Products } from './features/products/Products';
 import { Basket } from './features/basket/Basket';
 
+import 'nes.css/css/nes.min.css';
 import './App.css';
-import "nes.css/css/nes.min.css";
 
 export const App: React.FC = () => {
   return (
