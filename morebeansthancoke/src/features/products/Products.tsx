@@ -19,7 +19,7 @@ export const Products: React.FC<IProducts> = () => {
   )
 }
 
-const ProductCard: React.FC<Product> = ({ sku, name, description, pricePerKg, pricePerUnit, picture }) => {
+export const ProductCard: React.FC<Product> = ({ sku, name, description, pricePerKg, pricePerUnit, picture }) => {
   return (
     <article className="nes-container is-rounded card">
       add to basket - { name }
