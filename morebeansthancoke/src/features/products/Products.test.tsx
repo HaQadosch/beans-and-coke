@@ -38,6 +38,7 @@ test('renders the Beans details', async () => {
   const { getByText, getByAltText, container } = render(
     <ProductCard { ...products[0] } />
   )
+
   await waitFor(() => {
     expect(container.querySelector('img')?.src).toMatch(/Beans.png/i)
   })
