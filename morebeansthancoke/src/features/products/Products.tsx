@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { Product } from './catalog'
 import { selectProducts } from './productSlice'
 import './products.css'
+import { addItem } from '../basket/basketSlice'
 
 interface IProducts {
 
@@ -22,6 +23,7 @@ export const Products: React.FC<IProducts> = () => {
 
 export const ProductCard: React.FC<Product> = ({ sku, name, description, pricePerKg, priceDisplayed, picture }) => {
   const [picSrc, setPicSrc] = useState()
+  const dispatch = useDispatch()
 
   useEffect(() => {
     import(`../../assets/${ picture }`).then(src => {
@@ -50,8 +52,8 @@ export const ProductCard: React.FC<Product> = ({ sku, name, description, pricePe
       </div>
       <footer className="card__footer">
         <div className="card__actions">
-          <button type="button" className="button nes-btn is-primary">
-            Add to basket - { sku }
+          <button type="button" onClick={ () => dispatch(addItem(sku)) } className="button nes-btn is-primary" aria-label={`add ${name} to basket`}>
+            Add to basket
           </button>
         </div>
       </footer>

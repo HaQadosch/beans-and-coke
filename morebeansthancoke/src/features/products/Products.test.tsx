@@ -1,7 +1,9 @@
-import { render, waitFor } from '@testing-library/react'
+import { render, waitFor, fireEvent, getByText } from '@testing-library/react'
 import React from 'react'
 import { Provider } from 'react-redux'
+import { App } from '../../App'
 import { store, testState } from '../../app/store'
+import { Basket } from '../basket/Basket'
 import { ProductCard, Products } from './Products'
 import { selectProducts } from './productSlice'
 
@@ -38,7 +40,9 @@ describe('<Product />', () => {
     })
 
     const { getByText, getByAltText, container } = render(
-      <ProductCard { ...products[0] } />
+      <Provider store={ store }>
+        <ProductCard { ...products[0] } />
+      </Provider>
     )
 
     await waitFor(() => {
@@ -49,5 +53,22 @@ describe('<Product />', () => {
     expect(getByText(/0.50/))
     expect(getByText(/is a perfect addition to your dishes/i))
     expect(getByAltText(/Beans/i))
+  })
+
+  test('add the item in the basket when clicking add to basket', async () => {
+    const { debug, getAllByText, getByText, container } = render(
+      <Provider store={ store }>
+        <Products />
+        <Basket />
+      </Provider>
+    )
+
+    expect(getAllByText(/add to basket/i)).toHaveLength(3)
+
+    fireEvent.click(container.querySelectorAll('button[aria-label="add Beans to basket"]')[0])
+    await waitFor(() => {
+      expect(container.querySelectorAll('li button')).toHaveLength(1)
+    })
+    expect(getByText('Beans', { selector: 'li' }))
   })
 })
