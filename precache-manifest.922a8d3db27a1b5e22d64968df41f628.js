@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1298ee080dba28240c15135005e43eb5",
+    "revision": "25bb7119ebd3bd238736ad9c08db2ed7",
     "url": "/beans-and-coke/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/beans-and-coke/static/css/2.87d4210f.chunk.css"
   },
   {
-    "revision": "df18fce8592dde1cdfaf",
+    "revision": "1dbd0f795dc0a445371d",
     "url": "/beans-and-coke/static/css/main.ecf16e05.chunk.css"
   },
   {
@@ -32,8 +32,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/beans-and-coke/static/js/5.0bba5f8f.chunk.js"
   },
   {
-    "revision": "df18fce8592dde1cdfaf",
-    "url": "/beans-and-coke/static/js/main.bf62950b.chunk.js"
+    "revision": "1dbd0f795dc0a445371d",
+    "url": "/beans-and-coke/static/js/main.876e33c3.chunk.js"
   },
   {
     "revision": "0ba18dd71ed9c5746c19",
