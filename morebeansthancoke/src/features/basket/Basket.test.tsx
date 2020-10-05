@@ -1,9 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit'
-import { render, fireEvent } from '@testing-library/react'
+import { render, fireEvent, within, waitFor } from '@testing-library/react'
 import React from 'react'
 import { Provider } from 'react-redux'
+import { Products } from '../products/Products'
 import { Basket } from './Basket'
 import basketReducer, { BasketItem } from './basketSlice'
+import productReducer from '../products/productSlice'
+import { catalog } from '../products/catalog'
 
 const item1: BasketItem = {
   sku: '1',
@@ -40,7 +43,7 @@ describe('<Basket />', () => {
         basket: []
       }
     })
-    const { debug, container } = render(
+    const { container } = render(
       <Provider store={ store }>
         <Basket />
       </Provider>
@@ -95,5 +98,61 @@ describe('<Basket />', () => {
     expect(container.querySelectorAll('button')).toHaveLength(2)
     expect(getByText(/beans/i))
     expect(getByText(/oranges/i))
+  })
+
+  describe('Basket total price', () => {
+    test('total is 0 when basket is empty', () => {
+      const store = configureStore({
+        reducer: {
+          basket: basketReducer
+        },
+        preloadedState: {
+          basket: []
+        }
+      })
+      const { getByText } = render(
+        <Provider store={ store }>
+          <Basket />
+        </Provider>
+      )
+
+      const basketTotal = getByText('Sub-total')
+      within(basketTotal).getByText('0')
+    })
+
+    test('total is the sum of the prices of the listed articles', async () => {
+      const store = configureStore({
+        reducer: {
+          basket: basketReducer,
+          products: productReducer
+        },
+        preloadedState: {
+          basket: [item1, item2, item3],
+          products: { products: catalog }
+        }
+      })
+      const { getByText, container, debug } = render(
+        <Provider store={ store }>
+          <Products />
+          <Basket />
+        </Provider>
+      )
+
+      const basketTotal = getByText('Sub-total')
+      within(basketTotal).getByText('3.19') // 0.5 + 0.7 + 1.99
+
+      // adding an article
+      fireEvent.click(container.querySelectorAll('button[aria-label="add Beans to basket"]')[0])
+      await waitFor(() => {
+        within(basketTotal).getByText('3.69') // 0.5 + 0.7 + 1.99 + 0.5
+      })
+
+      // removing an article
+      fireEvent.click(container.querySelectorAll('li button')[0])
+      await waitFor(() => {
+        within(basketTotal).getByText('3.19') // 0.7 + 1.99 + 0.5
+      })
+    })
+
   })
 })
