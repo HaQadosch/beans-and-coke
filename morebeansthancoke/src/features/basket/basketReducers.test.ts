@@ -19,6 +19,7 @@ describe('basket/removeItem', () => {
         name: 'Beans',
         pricePerKg: null,
         pricePerUnit: 0.5,
+        priceDisplayed: '0.50',
         uuid: '7af8273b-0065-487e-96ed-30d89ff48ca3'
       }
     ]
@@ -32,6 +33,7 @@ describe('basket/removeItem', () => {
       name: 'Beans',
       pricePerKg: null,
       pricePerUnit: 0.5,
+      priceDisplayed: '0.50',
       uuid: '86b71838-f2cc-4425-9c78-1575984a68be'
     }
 
@@ -40,6 +42,7 @@ describe('basket/removeItem', () => {
       name: 'Beans',
       pricePerKg: null,
       pricePerUnit: 0.5,
+      priceDisplayed: '0.50',
       uuid: 'd5879246-60e4-4da0-b2f5-d85a3dd129a0'
     }
     const item2: BasketItem = {
@@ -47,6 +50,7 @@ describe('basket/removeItem', () => {
       name: 'Beans',
       pricePerKg: null,
       pricePerUnit: 0.5,
+      priceDisplayed: '0.50',
       uuid: '4a5a0d13-e39c-4b70-b506-71fa635d6f60'
     }
 

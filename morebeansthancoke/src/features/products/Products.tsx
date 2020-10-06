@@ -5,19 +5,17 @@ import { selectProducts } from './productSlice'
 import './products.css'
 import { addItem } from '../basket/basketSlice'
 
-interface IProducts {
-
-}
-
-export const Products: React.FC<IProducts> = () => {
+export const Products: React.FC = () => {
   const { products } = useSelector(selectProducts)
 
   return (
-    <section className="products"> {
-      products.map((product: Product) =>
-        <ProductCard key={ product.sku } { ...product } />
-      )
-    }</section>
+    <section className="products">
+      {
+        products.map((product: Product) =>
+          <ProductCard key={ product.sku } { ...product } />
+        )
+      }
+    </section>
   )
 }
 
@@ -52,7 +50,7 @@ export const ProductCard: React.FC<Product> = ({ sku, name, description, pricePe
       </div>
       <footer className="card__footer">
         <div className="card__actions">
-          <button type="button" onClick={ () => dispatch(addItem(sku)) } className="button nes-btn is-primary" aria-label={`add ${name} to basket`}>
+          <button type="button" onClick={ () => dispatch(addItem(sku)) } className="button nes-btn is-primary" aria-label={ `add ${ name } to basket` }>
             Add to basket
           </button>
         </div>

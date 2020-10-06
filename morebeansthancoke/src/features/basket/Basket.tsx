@@ -3,11 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import './basket.css'
 import { removeItem, selectBasket } from './basketSlice'
 
-interface IBasket {
-
-}
-
-export const Basket: React.FC<IBasket> = () => {
+export const Basket: React.FC = () => {
   const { basket } = useSelector(selectBasket)
   const dispatch = useDispatch()
 
