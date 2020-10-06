@@ -32,7 +32,7 @@ export const Basket: React.FC = () => {
         <div className="lists">
           <ul className="nes-list is-circle">
             <li>Beans 3 for 2 <span className="nes-text is-success">-0.50</span></li>
-            <li>Coke 2 for #1 <span className="nes-text is-success">-0.40</span></li>
+            <li>Coke 2 for <i className="nes-icon coin is-small"></i>1 <span className="nes-text is-success">-0.40</span></li>
             <li>----</li>
             <li>Total savings <span className="nes-text is-success">-0.90</span></li>
           </ul>
