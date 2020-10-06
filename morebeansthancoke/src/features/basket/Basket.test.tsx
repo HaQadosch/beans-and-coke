@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit'
-import { render, fireEvent, within, waitFor } from '@testing-library/react'
+import { render, fireEvent, within, waitFor, cleanup } from '@testing-library/react'
 import React from 'react'
 import { Provider } from 'react-redux'
 import { Products } from '../products/Products'
@@ -7,6 +7,8 @@ import { Basket } from './Basket'
 import basketReducer, { BasketItem } from './basketSlice'
 import productReducer from '../products/productSlice'
 import { catalog } from '../products/catalog'
+
+afterEach(cleanup)
 
 const item1: BasketItem = {
   sku: '1',
@@ -40,7 +42,10 @@ describe('<Basket />', () => {
         basket: basketReducer
       },
       preloadedState: {
-        basket: []
+        basket: {
+          items: [],
+          offers: []
+        }
       }
     })
     const { container } = render(
@@ -58,7 +63,10 @@ describe('<Basket />', () => {
         basket: basketReducer
       },
       preloadedState: {
-        basket: [item1, item2, item3]
+        basket: {
+          items: [item1, item2, item3],
+          offers: []
+        }
       }
     })
     const { debug, container, getByText } = render(
@@ -82,7 +90,10 @@ describe('<Basket />', () => {
         basket: basketReducer
       },
       preloadedState: {
-        basket: [item1, item2, item3]
+        basket: {
+          items: [item1, item2, item3],
+          offers: []
+        },
       }
     })
     const { debug, container, getByText } = render(
@@ -107,7 +118,10 @@ describe('<Basket />', () => {
           basket: basketReducer
         },
         preloadedState: {
-          basket: []
+          basket: {
+            items: [],
+            offers: []
+          },
         }
       })
       const { getByText } = render(
@@ -117,7 +131,7 @@ describe('<Basket />', () => {
       )
 
       const basketTotal = getByText('Sub-total')
-      within(basketTotal).getByText('0')
+      within(basketTotal).getByText('0.00')
     })
 
     test('total is the sum of the prices of the listed articles', async () => {
@@ -127,7 +141,10 @@ describe('<Basket />', () => {
           products: productReducer
         },
         preloadedState: {
-          basket: [item1, item2, item3],
+          basket: {
+            items: [item1, item2, item3],
+            offers: []
+          },
           products: { products: catalog }
         }
       })

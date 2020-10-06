@@ -87,7 +87,10 @@ describe('<Product />', () => {
       },
       preloadedState: {
         products: { products: catalog },
-        basket: [],
+        basket: {
+          items: [],
+          offers: []
+        },
       }
     })
     const { getAllByText, container } = render(

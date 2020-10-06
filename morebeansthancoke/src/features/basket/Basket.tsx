@@ -13,7 +13,7 @@ export const Basket: React.FC = () => {
         <p className="title">Basket</p>
         <div className="lists">
           <ul className="nes-list is-disc">
-            { basket.map(({ uuid, name, priceDisplayed }) => (
+            { basket.items.map(({ uuid, name, priceDisplayed }) => (
               <li key={ uuid }>
                 <button type="button" onClick={ () => dispatch(removeItem(uuid)) } className="nes-btn"><i className="nes-icon close is-small"></i></button>
                 { name } { ' ' }
@@ -22,12 +22,12 @@ export const Basket: React.FC = () => {
             )) }
             <li>----</li>
             <li>Sub-total <span className="nes-text is-success">{
-              basket.reduce((acc, curr) => (curr.pricePerKg || curr.pricePerUnit || 0) + acc, 0).toFixed(2)
+              basket.items.reduce((acc, curr) => (curr.pricePerKg || curr.pricePerUnit || 0) + acc, 0).toFixed(2)
             }</span></li>
           </ul>
         </div>
       </div>
-      <div className="nes-container is-rounded with-title">
+      {/* <div className="nes-container is-rounded with-title">
         <p className="title">Savings</p>
         <div className="lists">
           <ul className="nes-list is-circle">
@@ -40,7 +40,7 @@ export const Basket: React.FC = () => {
       </div>
       <div className="nes-container is-dark is-rounded">
         <p>Total to pay: <span className="nes-text is-success">2.40</span></p>
-      </div>
+      </div> */}
     </section>
   )
 }

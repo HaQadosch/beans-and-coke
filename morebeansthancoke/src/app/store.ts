@@ -10,7 +10,10 @@ export const store = configureStore({
 });
 
 export const testState = {
-  basket: [],
+  basket: {
+    items: [],
+    offers: []
+  },
   products: {
     products: [
     ]
