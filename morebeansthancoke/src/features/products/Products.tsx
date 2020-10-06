@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { Product } from './catalog'
+import { Product } from "./ProductTypes"
 import { selectProducts } from './productSlice'
 import './products.css'
 import { addItem } from '../basket/basketSlice'

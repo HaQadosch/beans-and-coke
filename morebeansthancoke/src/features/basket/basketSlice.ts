@@ -1,24 +1,9 @@
 import { catalog } from './../products/catalog';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from '../../app/store';
-import { Product } from '../products/catalog'
+import { Product } from "../products/ProductTypes";
 import { v4 as uuidv4 } from 'uuid';
-
-export type BasketItem = Pick<Product, 'sku' | 'name' | 'pricePerKg' | 'pricePerUnit' | 'priceDisplayed'> & {
-  uuid: string
-}
-
-export interface OfferItem {
-  name: string
-  description: string
-  savingPerUnit: number
-  savingDisplayed: string
-}
-
-export interface BasketState {
-  items: BasketItem[]
-  offers: OfferItem[]
-}
+import { BasketState } from './BasketTypes';
 
 const initialState: BasketState = {
   items: [],

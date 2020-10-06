@@ -1,10 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { RootState } from '../../app/store';
-import { Product, catalog } from './catalog'
-
-interface ProductsState {
-  products: Product[];
-}
+import { catalog } from './catalog'
+import { ProductsState } from "./ProductTypes";
 
 const initialState: ProductsState = {
   products: catalog

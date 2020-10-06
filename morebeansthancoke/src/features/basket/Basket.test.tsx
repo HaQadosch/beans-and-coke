@@ -4,7 +4,8 @@ import React from 'react'
 import { Provider } from 'react-redux'
 import { Products } from '../products/Products'
 import { Basket } from './Basket'
-import basketReducer, { BasketItem } from './basketSlice'
+import basketReducer from './basketSlice'
+import { BasketItem } from "./BasketTypes"
 import productReducer from '../products/productSlice'
 import { catalog } from '../products/catalog'
 

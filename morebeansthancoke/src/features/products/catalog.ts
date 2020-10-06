@@ -1,12 +1,4 @@
-export interface Product {
-  sku: string
-  name: string
-  description: string
-  priceDisplayed: string
-  pricePerUnit: number | null
-  pricePerKg: number | null
-  picture: string
-}
+import { Product } from "./ProductTypes"
 
 export const beans: Product = {
   sku: '1',

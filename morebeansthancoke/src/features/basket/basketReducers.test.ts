@@ -1,8 +1,5 @@
 
-import {
-  BasketItem,
-  BasketState
-} from './basketSlice'
+import { BasketItem, BasketState } from "./BasketTypes";
 import reducer from './basketSlice'
 
 describe('basket/removeItem', () => {
