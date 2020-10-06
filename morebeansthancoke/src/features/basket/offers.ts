@@ -8,8 +8,13 @@ export const bean1: OfferItem = {
 }
 
 export const coke1: OfferItem = {
-  id: 1,
+  id: 2,
   description: 'Coke 2 for <i className="nes-icon coin is-small"></i>1',
   savingDisplayed: '0.50',
   savingPerUnit: 0.50
 }
+
+export const offers: OfferItem[] = [
+  bean1,
+  coke1
+]

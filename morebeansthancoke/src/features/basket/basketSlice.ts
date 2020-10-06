@@ -3,7 +3,8 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from '../../app/store';
 import { Product } from "../products/ProductTypes";
 import { v4 as uuidv4 } from 'uuid';
-import { BasketState } from './BasketTypes';
+import { BasketState, OfferItem } from './BasketTypes';
+import { offers } from './offers';
 
 const initialState: BasketState = {
   items: [],
@@ -25,6 +26,13 @@ export const basketSlice = createSlice({
     removeItem: (state, action: PayloadAction<string>) => {
       state.items = state.items.filter(({ uuid }) => uuid !== action.payload)
     },
+    // { type: 'basket/addItem', payload: '1' }
+    addOffer: (state, action: PayloadAction<OfferItem['id']>) => {
+      const [foundOffer] = offers
+        .filter(({ id}) => id === action.payload)
+      if (foundOffer?.id !== undefined) state.offers.push(foundOffer)
+    },
+    // removeOffer: no need as we compute the list of offers from [] everytime there is a basket action.
   },
 });
 
